@@ -1,4 +1,4 @@
-var todo = $("#input-area").val()
+
 
 var listItems = []
 
@@ -6,9 +6,10 @@ $("#priority-area").on("click", function(event){
     event.preventDefault()
     addItem()
 })
-$("#backburner-area").on("click", function(event){
+$("#backburner-button").on("click", function(event){
     event.preventDefault()
     addItem()
+    
 })
 
 $("#done-button").on("click", function(event){
@@ -17,18 +18,20 @@ $("#done-button").on("click", function(event){
 })
 
 function addItem(){
-    for (i=0; i<listItems.length; i++){
-        var li = $("<li>").text(todo).addClass("list-item").addId(`item${[i]}`)
-        var doneBtn = $("<button>").text("done").addId("done-button"+[i])
-        todo.val("")
-        
-    if (listItems < 6){
-        listItems.push(todo.val)
+    var todo = $("#input-area").val()
+    listItems.push(todo)
+    if (listItems.length < 6){
+        console.log(todo)
+        var li = $("<li>").text(todo).addClass("list-item")
+        var doneBtn = $("<button>").text("done").addClass("doneButton")
+        $("#input-area").val("").attr("style", "display: block")
         $("#to-do-list").append(li, doneBtn)
+
     } else {
         alert("You can only have 5 items on the list")
+        $("#input-area").attr("style", "display: none")
     }
-}}
+}
 
 function removeItem(){
     for (i=0; i<listItems.length; i++){
@@ -39,14 +42,15 @@ function removeItem(){
     })
 }}
 
+
 $("#how-to-play-button").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").style.display= "block";
+    $(".modal-content").attr("style", "display: block")
 })
 
 $(".close").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").style.display= "none";
+    $(".modal-content").attr("style", "display: none")
 })
 
 
