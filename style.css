@@ -29,3 +29,7 @@ h1 {
 .input {
     background-color: lightgray;
 }
+
+.modal-content {
+    display: none;
+}
