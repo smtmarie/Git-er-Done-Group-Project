@@ -61,7 +61,7 @@ function addPriorityItem(){
     for (i=0; i<priorityItems.length; i++){}
     if (priorityItems.length < 6){
         var li = $("<li>").text(todo).addClass("list-item").attr("id", `priority-item${[i]}`)
-        var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", `priority-done-button${[i]}`)
+        var doneBtn = $("<button>").text("done").addClass("done-button").attr("id", `priority-done-button${[i]}`)
         $("#priority-input-area").val("").attr("style", "display: block")
         $("#priority-list").append(li, doneBtn)
     } else {
@@ -71,7 +71,6 @@ function addPriorityItem(){
     $(`#priority-done-button${[i]}`).on("click", function(event){
         event.preventDefault()
         removePriorityItem()
-        
     })
 }
 
@@ -95,15 +94,15 @@ function removeBackburnerItem(itemNumber){
 // }
 
 
-$("#how-to-play-button").on("click", function(event){
+$("#how-to-play").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").attr("style","display: block");
+    $(".modal-content").attr("style", "display: block");
 })
 
-$(".close").on("click", function(event){
+$("#how-to-play-close").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").attr("style","display: none");
-    $(".drink-modal-content").attr("style","display: none");
+    $(".modal-content").attr("style", "display: none");
+    // $(".drink-modal-content").attr("style","display: none;");
 })
 
 $("#test-button").on("click", function(event){
@@ -158,3 +157,9 @@ $.ajax({
 // })
 
 
+$.ajax({
+    url: "https://api.giphy.com/v1/gifs/search?api_key=2jkgI7sqydQi0NagA26t8oZzbohkiinM&q=stay+focused/random.php",
+    method: "GET"
+}).then(function(response){
+    response.data[0].url
+    })
