@@ -1,15 +1,4 @@
-/* attempt on media query for mobile lines 1- 20 */
- /* [class*="col-"] {
-    width: 100%;
-  } */
 
-/* @media (max-width: 1366px)  { */
-    /* For mobile: */
-/*  
-    .priorities {
-        padding-top: 5%;}
-     */
-  
 h1 {
     text-align: center;
 }
@@ -73,21 +62,22 @@ nav a {
 }
 
 .priorities {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 10%;
     text-align: center;
     width:67%;
     margin: 0 auto;
-    margin-top: 0px; 
+
 
 }
 
 .backBurner {
     height: 20%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
     width:67%;
     margin: 0 auto;
+    margin-top: 5px;;
 }
 
 .howTo {
@@ -98,6 +88,7 @@ nav a {
     background-color: rgba(238, 238, 238, 0);
     width: 60%;
     height: 10%;
+ 
  
 }
 
@@ -125,15 +116,42 @@ top:0;
 left:0;
 }
 
-@media (min-width: 500px)  {
+.pBtn {
+    width: 20%;
+    font-size: 80%;
+    margin-bottom: 5px;
+}
+
+.bBtn {
+    width: 25%;
+    font-size: 80%;
+}
+
+@media (min-width: 320px){
+    .input {
+    height: 5px;
+    }
+    .checkbox{
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 375px)  {
     /* For mobile: */
  
     .priorities {
-       margin-top: 10%;}
+       margin-top: 8%;}
+       .input {
+          height: 2vh;
+          margin-bottom: 3vh;
+       }
+ 
+       
 }
 
 @media (min-width: 1022px){
     .priorities {
         margin-top: 12%;
+        
     }
 }
