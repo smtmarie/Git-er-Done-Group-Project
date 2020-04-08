@@ -108,6 +108,7 @@ nav a {
 }
 
 .modal-content {
+    background-color: lightgray;
     display: none;
 }
 
