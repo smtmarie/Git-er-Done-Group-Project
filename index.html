@@ -76,20 +76,47 @@
 
 
     <div class="backBurner">
-        <button class="button is-warning is-light bBtn">
+        <button class="button is-warning is-light bBtn" id= "backburner-button"
             <!-- <span class="icon thumbs"> -->
             <!-- <i class="fas fa-thumbs-up"></i> -->
             </span>
-            Back Burner</button>
+            Back Burner</button><br>
+            <textarea class="textArea" id="input-area"></textarea>
         <ul id="to-do-list"></ul><br>
         <!-- <br><input class="inputA input"><br>
         <br><input class="inputB input"><br>
         <br><input class="inputC input"><br>
         <br><input class="inputD input"><br>
         <br><input class="inputE input"></div> -->
-        <textarea class="textArea" id="input-area"></textarea>
     </div>
     </div>
+    <button class="button is-primary is-outlined" id="test-button">test modal</button>
+
+    <div class="container" id="drink-modal">
+        <div class="boxes">
+            <div class="drink-modal-content"> 
+                <div class="modal-header">
+                    <span class="close">x</span>
+                </div>
+                <button class="button is-primary is-outlined" id="alcoholic-button">Alcoholic</button>
+                <button class="button is-primary is-outlined" id="nonalcoholic-button">Non Alcoholic</button>
+                <div class="drink-modal-body">
+                    <h2 id="drink-modal-header"></h2>
+                    <ul id="drink-ul">
+                        <li id="drink-glass"></li>
+                        <li id="drink-ingredients"></li>
+                        <li id="drink-instructions"></li>
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+        
+    </div>
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
