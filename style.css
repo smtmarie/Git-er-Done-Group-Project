@@ -45,16 +45,11 @@ h1 {
   
   #logo {
     float: left;
-    width: 28%;
-    height: 40px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 45px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    background: #5455527a;
+    width: 363px;
+    height: 314px; 
+    background: transparent;
+    margin-top: 0;
+    margin-left: 0;
   }
   
   nav {
