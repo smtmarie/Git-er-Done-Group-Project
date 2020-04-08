@@ -41,12 +41,12 @@ function removeItem(){
 
 $("#how-to-play-button").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").style.display= "block";
+    $(".modal-content").attr("style","display: block");
 })
 
 $(".close").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").style.display= "none";
+    $(".modal-content").attr("style","display: none");
 })
 
 
