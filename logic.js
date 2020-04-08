@@ -99,6 +99,27 @@ $(".close").on("click", function(event){
 
 
 
+$.ajax({
+    url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
+    method: "GET"
+}).then(function(response){
+    console.log(response)
+    var drinkName= response.drinks[0].strDrink
+    var drinkGlass= response.drinks[0].strGlass
+    var drinkInstructions= response.drinks[0].strInstructions
+    var drinkIngredients= [response.drinks[0].strIngredient1, response.drinks[0].strIngredient2, response.drinks[0].strIngredient3, response.drinks[0].strIngredient4, response.drinks[0].strIngredient5, response.drinks[0].strIngredient6, response.drinks[0].strIngredient7]
+    var heading= $("<h2>")
+    var ul=$("<ul>")
+    var li("<li>")
+    $("#alcoholic-button").on("click", function(){
+        event.preventDefault()
+        $(".drink-modal").append(heading, ul)
+        heading.text(drinkName)
+        ul.append(li).text(drinkGlass)
+        ul.append(li).text(drinkInstructions)
+        ul.append(li).text(drinkIngredients)
+    })
 
+})
 
 
