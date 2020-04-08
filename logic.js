@@ -157,9 +157,3 @@ $.ajax({
 // })
 
 
-$.ajax({
-    url: "https://api.giphy.com/v1/gifs/search?api_key=2jkgI7sqydQi0NagA26t8oZzbohkiinM&q=stay+focused/random.php",
-    method: "GET"
-}).then(function(response){
-    response.data[0].url
-    })
