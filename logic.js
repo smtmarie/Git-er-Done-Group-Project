@@ -89,12 +89,12 @@ function removeBackburnerItem(){
 
 $("#how-to-play-button").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").attr("style", "display: block")
+    $(".modal-content").attr("style","display: block");
 })
 
 $(".close").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").attr("style", "display: none")
+    $(".modal-content").attr("style","display: none");
 })
 
 
