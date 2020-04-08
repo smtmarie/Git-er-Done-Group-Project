@@ -1,22 +1,14 @@
 /* attempt on media query for mobile lines 1- 20 */
- [class*="col-"] {
+ /* [class*="col-"] {
     width: 100%;
-  }
+  } */
 
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;} 
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+/* @media (max-width: 1366px)  { */
+    /* For mobile: */
+/*  
+    .priorities {
+        padding-top: 5%;}
+     */
   
 h1 {
     text-align: center;
@@ -45,8 +37,8 @@ h1 {
   
   #logo {
     float: left;
-    width: 250px;
-    height: 50px;
+    width: 28%;
+    height: 40px;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 20px;
     font-weight: 700;
@@ -82,18 +74,19 @@ nav a {
 
 .priorities {
     border: 1px solid black;
-    height: 500px;
+    height: 10%;
     text-align: center;
-    width:75%;
+    width:67%;
     margin: 0 auto;
-    margin-top: 90px; 
+    margin-top: 0px; 
+
 }
 
 .backBurner {
-    height: 500px;
+    height: 20%;
     border: 1px solid black;
     text-align: center;
-    width:75%;
+    width:67%;
     margin: 0 auto;
 }
 
@@ -103,8 +96,9 @@ nav a {
 
 .input {
     background-color: rgba(238, 238, 238, 0);
-    width: 70%;
-    margin-left: -15%
+    width: 60%;
+    height: 10%;
+ 
 }
 
 .modal-content {
@@ -124,9 +118,22 @@ nav a {
     margin-left: 25px;
 }
 
-body {
-    background-image: url("assets/ntPd.jpg"); 
-  background-size: cover;
-      background-repeat: no-repeat;
-      background-size: cover;
+.src {
+width:100%;
+position: absolute;
+top:0;
+left:0;
+}
+
+@media (min-width: 500px)  {
+    /* For mobile: */
+ 
+    .priorities {
+       margin-top: 10%;}
+}
+
+@media (min-width: 1022px){
+    .priorities {
+        margin-top: 12%;
+    }
 }
