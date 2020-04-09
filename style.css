@@ -101,7 +101,8 @@ nav a {
     margin: 0 auto;
 }
 
-.modal-content {
+.howto-modal-content,
+gif-modal-content {
     background-color: lightgray;
     display: none;
 }
@@ -170,7 +171,7 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
 }
-#drink-modal{
+.drink-modal-content{
     display: none;
     background-color: red;
 }
