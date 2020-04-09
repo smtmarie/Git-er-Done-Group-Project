@@ -22,6 +22,7 @@ h1 {
     margin: 0 0 0px;
     overflow: auto;
     color: #ffffff;
+   
   }
   
   #logo {
@@ -69,7 +70,7 @@ nav a {
     text-align: center;
     width:67%;
     margin: 0 auto;
-
+    flex: 1;
 
 }
 
@@ -96,9 +97,11 @@ nav a {
  
 }
 .textArea {
-    background-color: #ffffff00;
-    width:98%;
+    background-color: rgba(0, 0, 0, 0);
     margin: 0 auto;
+    width: 98%;
+    margin-top: 1%;
+    border: #0000009a;
 }
 
 .howto-modal-content,
@@ -144,17 +147,20 @@ left:0;
     .checkbox{
         font-size: 10px;
     }
+    #drink-modal {
+        margin: 0 auto;
+        height: 30%;
+    }
 }
 
 @media (min-width: 375px)  {
     /* For mobile: */
- 
+ body{
+  
+ }
     .priorities {
        margin-top: 8%;}
-       .input {
-          height: 2vh;
-          margin-bottom: 3vh;
-       }
+     
  
        
 }
@@ -170,6 +176,9 @@ body {
   background-size: cover;
       background-repeat: no-repeat;
       background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 1vh;
 }
 .drink-modal-content{
     display: none;
@@ -179,6 +188,21 @@ body {
     display: none;
 }
 #input-area{
-    width: 20%;
-    height: 80px;
+ 
+    height: 4em;
+}
+
+#logo {
+    float: left;
+    width: 15%;
+    height: 13.05%;
+    background: transparent;
+    
+}
+
+#how-to-play-button {
+margin-right: 2.1em;
+margin-top: -1em;
+   height: 1em;
+   width: 1em;
 }
