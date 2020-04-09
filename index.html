@@ -18,27 +18,44 @@
 
     <header id="masthead">
         <div class="container2">
-            <a href="index.html" id="logo">Git 'Er Done!</a>
+            <a href="index.html" id="logo">
+                <img src="assets/GitErDone_Logo.png" alt="GED-logo">
+            </a>
             <nav>
-                <a href="index.html">How to play!</a> </nav>
+                <a href="index.html" id="how-to-play-button">How to play!</a> </nav>
         </div>
     </header> 
     <div class="container">
         <div class="boxes">
-    
-
            <div class="modal-content"> 
-        <div class="modal-header">
-            <span class="close">x</span>
-            <h2>How to play</h2>
-        </div>
-        <div class="modal-body">
-            <p><strong><u>Instructions</u></strong></p>
-            <p>Life gets in the way of productivity, right?! The Get 'Er Done challenge rewards you for getting done what you really should get done, having some fun in the process. Check your to-dos off and get rewarded with some fun. Not checking off your to-dos equals no fun, as well as decreasing allowed fun time. Did we tell you everything is timed?</p>
-            <br>
-            <p>Essentially, Get 'er Done! Make it through all your tasks for a nice reward.  Good luck.</p>
+                <div class="howto-modal-header">
+                    <span class="close" id="close-how-to">x</span>
+                    <h2>How to play</h2>
+                </div>
+                <div class="modal-body">
+                    <p><strong><u>Instructions</u></strong></p>
+                    <p>Life gets in the way of productivity, right?! The Get 'Er Done challenge rewards you for getting done what you really should get done, having some fun in the process. Check your to-dos off and get rewarded with some fun. Not checking off your to-dos equals no fun, as well as decreasing allowed fun time. Did we tell you everything is timed?</p>
+                    <br>
+                    <p>Essentially, Get 'er Done! Make it through all your tasks for a nice reward.  Good luck.</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="container" id="gif-modal">
+        <div class="boxes">
+           <div class="modal-content"> 
+                <div>
+                    <span class="close" id="close-gif">x</span>
+                </div>
+                <div class="modal-body">
+                    <img id="gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     
@@ -72,14 +89,16 @@
         <label class="checkbox">
             <input type="checkbox">
            Done!
-        </label></div>
-
-
+        </label>
+        
+    </div>
+    
+    
     <div class="backBurner">
         <button class="button is-warning is-light bBtn" id= "backburner-button"
              <span class="icon thumbs"> 
             <!-- <i class="fas fa-thumbs-up"></i> -->
-            </span>
+            </span> -->
             Back Burner</button><br>
             <textarea class="textArea" id="input-area"></textarea>
         <ul id="to-do-list"></ul><br>
@@ -87,9 +106,9 @@
         <br><input class="inputB input"><br>
         <br><input class="inputC input"><br>
         <br><input class="inputD input"><br>
-        <br><input class="inputE input"></div> -->
-    </div>
-    </div>
+        <br><input class="inputE input"></div>
+    </div> -->
+    
     <button class="button is-primary is-outlined" id="test-button">test modal</button>
 
     <div class="container" id="drink-modal">
@@ -102,16 +121,18 @@
                 <button class="button is-primary is-outlined" id="nonalcoholic-button">Non Alcoholic</button>
                 <div class="drink-modal-body">
                     <h2 id="drink-modal-header"></h2>
+                    <img id="drink-image">
                     <ul id="drink-ul">
                         <li id="drink-glass"></li>
                         <li id="drink-ingredients"></li>
                         <li id="drink-instructions"></li>
                     </ul>
                     
+                    
                    
                 </div>
             </div>
-        
+        </div>
     </div>
 
 

@@ -17,25 +17,27 @@ h1 {
 }
 #masthead {
     position: fixed;
-    z-index: 99;
+    z-index: 0;
     width: 100%;
-    margin: 0 0 30px;
+    margin: 0 0 0px;
     overflow: auto;
     color: #ffffff;
   }
   
   #logo {
     float: left;
-    width: 28%;
-    height: 40px;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 45px;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    background: #5455527a;
+    width: 240px;
+    height: 208px; 
+    background: transparent;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #how-to-play-button {
+      margin-right: 80px;
+      color: black;
+      font-size: x-large;
+      font-family: Arial, Helvetica, sans-serif;
   }
   
   nav {
@@ -161,6 +163,7 @@ left:0;
         margin-top: 12%;
         
     }
+}
 body {
     background-image: url("assets/ntPd.jpg"); 
   background-size: cover;
@@ -170,4 +173,11 @@ body {
 #drink-modal{
     display: none;
     background-color: red;
+}
+#gif-modal{
+    display: none;
+}
+#input-area{
+    width: 20%;
+    height: 80px;
 }
