@@ -104,7 +104,8 @@ nav a {
     border: #0000009a;
 }
 
-.modal-content {
+.howto-modal-content,
+gif-modal-content {
     background-color: lightgray;
     display: none;
 }
@@ -179,7 +180,7 @@ body {
       flex-direction: column;
       min-height: 1vh;
 }
-#drink-modal{
+.drink-modal-content{
     display: none;
     background-color: red;
 }
