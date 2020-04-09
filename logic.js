@@ -31,54 +31,79 @@ $("#backburner-button").on("click", function(event){
 
 // }
 
+var backburnerId = 1
+
 function addBackburnerItem(){
     var todo = $("#input-area").val()
     backburnerItems.push(todo)
-    for (i=0; i<backburnerItems.length; i++){}
     if (backburnerItems.length < 6){
-        var li = $("<li>").text(todo).addClass("list-item").attr("id", `backburner-item${i}`)
-        var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", i)
+        var li = $("<li>").text(todo).addClass("list-item").attr("id", `backburner-item${backburnerId}`)
+        var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", backburnerId)
         // var doneBtn = $("<label>").addClass("checkbox").text("Finished!")
         // var checkBox= $("<input>").attr("type", "checkbox").attr("id", i)
         $("#input-area").val("").attr("style", "display: block")
-        $("#to-do-list").append(li, doneBtn)
-        doneBtn.append(checkBox)
+        $("#backburner-to-do-list").append(li, doneBtn)
+        // doneBtn.append(checkBox)
+        backburnerId++
     } else {
         $("#input-area").attr("style", "display: none")
     }
 }
 
-$("#to-do-list").on("click", ".doneButton", function(event){
+// function addPriorityItem(){
+//     var todo = $("#input-area").val()
+//     priorityItems.push(todo)
+//     for (i=0; i<priorityItems.length; i++){}
+//     if (priorityItems.length < 6){
+//         var li = $("<li>").text(todo).addClass("list-item").attr("id", `priority-item${i}`)
+//         var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", i)
+//         // var doneBtn = $("<label>").addClass("checkbox").text("Finished!")
+//         // var checkBox= $("<input>").attr("type", "checkbox").attr("id", i)
+//         $("#input-area").val("").attr("style", "display: block")
+//         $("#priority-to-do-list").append(li, doneBtn)
+//         doneBtn.append(checkBox)
+//     } else {
+//         $("#input-area").attr("style", "display: none")
+//     }
+// }
+
+$("#backburner-to-do-list").on("click", ".doneButton", function(event){
     event.preventDefault()
-    console.log($(this).attr("id"))
     removeBackburnerItem($(this).attr("id"))
     
 })
 
-function addPriorityItem(){
-    var todo = $("#priority-input-area").val()
-    priorityItems.push(todo)
-    for (i=0; i<priorityItems.length; i++){}
-    if (priorityItems.length < 6){
-        var li = $("<li>").text(todo).addClass("list-item").attr("id", `priority-item${[i]}`)
-        var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", `priority-done-button${[i]}`)
-        $("#priority-input-area").val("").attr("style", "display: block")
-        $("#priority-list").append(li, doneBtn)
-    } else {
-        $("#priority-input-area").attr("style", "display: none")
-    }
+// $("#priority-to-do-list").on("click", ".doneButton", function(event){
+//     event.preventDefault()
+//     removePriorityItem($(this).attr("id"))
+    
+// })
 
-    $(`#priority-done-button${[i]}`).on("click", function(event){
-        event.preventDefault()
-        removePriorityItem()
+
+// function addPriorityItem(){
+//     var todo = $("#priority-input-area").val()
+//     priorityItems.push(todo)
+//     for (i=0; i<priorityItems.length; i++){}
+//     if (priorityItems.length < 6){
+//         var li = $("<li>").text(todo).addClass("list-item").attr("id", `priority-item${[i]}`)
+//         var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", `priority-done-button${[i]}`)
+//         $("#priority-input-area").val("").attr("style", "display: block")
+//         $("#priority-list").append(li, doneBtn)
+//     } else {
+//         $("#priority-input-area").attr("style", "display: none")
+//     }
+
+//     $(`#priority-done-button${[i]}`).on("click", function(event){
+//         event.preventDefault()
+//         removePriorityItem()
         
-    })
-}
+//     })
+// }
 
-function removePriorityItem(){
-    for (i=0; i<priorityItems.length; i++){}
-    $(`#priority-item${[i]}`).remove()
-    $(`#priority-done-button${[i]}`).remove()
+function removePriorityItem(itemNumber){
+    $(`#priority-item${itemNumber}`).remove()
+    $(`#${itemNumber}`).remove()
+    priorityItems.pop()
 }
 
 function removeBackburnerItem(itemNumber){
@@ -88,12 +113,11 @@ function removeBackburnerItem(itemNumber){
     console.log(backburnerItems)
 }
 
-// function removeItem(arr){
-//     for (i=0; i<arr.length; i++){}
-//     $(`#${arr}-number${[i]}`).remove()
-//     $(`#${arr}-done-button${[i]}`).remove()
-// }
-
+function removeItem(arr){
+    for (i=0; i<arr.length; i++){}
+    $(`#${arr}-number${[i]}`).remove()
+    $(`#${arr}-done-button${[i]}`).remove()
+}
 
 $("#how-to-play-button").on("click", function(event){
     event.preventDefault()
@@ -109,19 +133,35 @@ $("#how-to-play-button").on("click", function(event){
     }
 }
 
+$("#close-gif").on("click", function(){
+        $("#gif-modal").attr("style", "display: none")
+    })
+    
 $("#close-how-to").on("click", function(event){
-    event.preventDefault()
-    $(".howto-modal-content").attr("style","display: none");
-})
-
+        event.preventDefault()
+        $(".howto-modal-content").attr("style","display: none");
+    })
+        
 $(".close").on("click", function(event){
-    event.preventDefault()
-    $(".drink-modal-content").attr("style","display: none");
-})
+        event.preventDefault()
+        $(".drink-modal-content").attr("style","display: none");
+    })
 
+// var modal = document.getElementById('testid');
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     event.preventDefault()
+// if (event.target == modal) {
+// modal.style.display = "none";
+//     }
+            
+$("#how-to-play-button").on("click", function(event){
+    event.preventDefault()
+    $(".howto-modal-content").attr("style","display: block");
+})
 $("#test-button").on("click", function(event){
     event.preventDefault()
-    $("#drink-modal").attr("style", "display: block")
+    $(".drink-modal-content").attr("style", "display: block")
 })
 
 $("#alcoholic-button").on("click", function(){
@@ -167,12 +207,14 @@ $.ajax({
 })
 
 $(".checkbox").on("click", function(){
+        $("#gif-modal").attr("style", "display: block;")
     $.ajax({
         url: "https://api.tenor.com/v1/search?key=XCBAJP1CF1AR&q=good+job",
         method: "GET"
     }).then(function(response){
         console.log(response)
-        $("#gif").attr("src", response.results[0].url)
+        var i = Math.floor(Math.random() * response.results.length)
+        $("#gif").attr("src", response.results[i].media[0].gif.url)
     })
 })
 
