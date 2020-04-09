@@ -33,17 +33,17 @@ h1 {
 }
 #masthead {
     position: fixed;
-    z-index: 99;
+    z-index: 0;
     width: 100%;
-    margin: 0 0 30px;
+    margin: 0 0 10px;
     overflow: auto;
     color: #ffffff;
   }
   
   #logo {
     float: left;
-    width: 363px;
-    height: 314px; 
+    width: 240px;
+    height: 208px; 
     background: transparent;
     margin-top: 0;
     margin-left: 0;
