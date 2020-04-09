@@ -30,7 +30,7 @@ h1 {
     width: 100%; 
     background: transparent;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   #how-to-play-button {
@@ -147,7 +147,7 @@ left:0;
 
 .bBtn {
     width: 25%;
-    font-size: 80%;
+    font-size: .8em;
 }
 
 @media (min-width: 320px){
@@ -231,6 +231,11 @@ margin-top: -1em;
   margin-top: 140%;
 }
 
-#modalBox{
-
+.list-item{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "pacifico";
+}
+.doneButton{
+    float: right;
 }
