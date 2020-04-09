@@ -166,3 +166,4 @@ $(".checkbox").on("click", function(){
         $("#gif").attr("src", response.results[0].url)
     })
 })
+
