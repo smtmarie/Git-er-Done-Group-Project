@@ -183,6 +183,9 @@ body {
     display: none;
     background-color: red;
 }
+#gif-modal{
+    display: none;
+}
 #input-area{
     width: 20%;
     height: 80px;

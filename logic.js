@@ -157,13 +157,22 @@ $.ajax({
     })
 })
 
-$(".checkbox").on("click", function(){
-    $.ajax({
-        url: "https://api.tenor.com/v1/search?key=XCBAJP1CF1AR&q=good+job",
-        method: "GET"
-    }).then(function(response){
-        console.log(response)
-        $("#gif").attr("src", response.results[0].url)
-    })
-})
+// $(".checkbox").on("click", function(){
+        $("#gif-modal").attr("style", "display: block;")
+//     $.ajax({
+//         url: "https://api.tenor.com/v1/search?key=XCBAJP1CF1AR&q=good+job",
+//         method: "GET"
+//     }).then(function(response){
+//         console.log(response)
+//         $("#gif").attr("src", response.results[0].url)
+//     })
 
+// })
+
+$.ajax({
+    url: "https://api.giphy.com/v1/gifs/search?q=keep+it+up&api_key=dc6zaTOxFJmzC&limit=10",
+    method: "GET"
+}).then(function(response){
+    console.log(response)
+    $("#gif").attr("src", response.data[0].images.original.url)
+})
