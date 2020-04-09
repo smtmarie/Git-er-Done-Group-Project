@@ -162,7 +162,8 @@ $(".checkbox").on("click", function(){
         url: "https://api.tenor.com/v1/search?key=XCBAJP1CF1AR&q=good+job",
         method: "GET"
     }).then(function(response){
-        console.log(response.data[0].url)
-        $("#gif").attr("src", response.data[0].url)
+        console.log(response)
+        $("#gif").attr("src", response.results[0].url)
     })
 })
+

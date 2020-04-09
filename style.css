@@ -31,14 +31,14 @@ h1 {
     margin: 0 auto;
     clear: both;
 }
-#masthead {
+/* #masthead {
     position: fixed;
     z-index: 99;
     width: 100%;
     margin: 0 0 30px;
     overflow: auto;
     color: #ffffff;
-  }
+  } */
   
   #logo {
     float: left;
