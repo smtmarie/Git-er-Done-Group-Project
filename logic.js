@@ -119,6 +119,19 @@ function removeItem(arr){
     $(`#${arr}-done-button${[i]}`).remove()
 }
 
+$("#how-to-play-button").on("click", function(event){
+    event.preventDefault()
+    $(".modal-content").attr("style","display: block");
+})
+    // Get the modal
+    var modal = document.getElementById('ht01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+}
 
 $("#close-gif").on("click", function(){
         $("#gif-modal").attr("style", "display: none")
@@ -204,3 +217,4 @@ $(".checkbox").on("click", function(){
         $("#gif").attr("src", response.results[i].media[0].gif.url)
     })
 })
+
