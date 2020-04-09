@@ -74,7 +74,7 @@ nav a {
 }
 
 .priorities {
-    /* border: 1px solid black; */
+   
     height: 10%;
     text-align: center;
     width:67%;
@@ -89,7 +89,8 @@ nav a {
     text-align: center;
     width:67%;
     margin: 0 auto;
-    margin-top: 5px;;
+    margin-top: 5px;
+    flex: 1;
 }
 
 .howTo {
@@ -110,7 +111,7 @@ nav a {
     margin: 0 auto;
     width: 98%;
     margin-top: 1%;
-    border: #0000009a;
+    border: lightskyblue;
 }
 
 .howto-modal-content,
@@ -182,17 +183,24 @@ left:0;
 }
 body {
     background-image: url("assets/ntPd.jpg"); 
-  background-size: cover;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      min-height: 1vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 1vh;
+    background-position: center;
 }
 .drink-modal-content{
     display: none;
-    background-color: red;
+    background-color: rgba(192, 192, 192, 0.705);
+    border-radius: 10%;
+    width:100%;
+    /* flex: 1; */
+  
 }
+
+
 #gif-modal{
     display: none;
 }
@@ -214,4 +222,15 @@ margin-right: 2.1em;
 margin-top: -1em;
    height: 1em;
    width: 1em;
+
+}
+.feet {
+   
+  flex: 1;
+  margin: 0 auto;
+  margin-top: 140%;
+}
+
+#modalBox{
+
 }
