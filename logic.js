@@ -100,9 +100,13 @@ $("#how-to-play-button").on("click", function(event){
     $(".modal-content").attr("style","display: block");
 })
 
+$("#close-how-to").on("click", function(event){
+    event.preventDefault()
+    $(".howto-modal-content").attr("style","display: none");
+})
+
 $(".close").on("click", function(event){
     event.preventDefault()
-    $(".modal-content").attr("style","display: none");
     $(".drink-modal-content").attr("style","display: none");
 })
 
@@ -117,44 +121,48 @@ $.ajax({
     url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
     method: "GET"
 }).then(function(response){
+    
     var drinkName= response.drinks[0].strDrink
     var drinkGlass= response.drinks[0].strGlass
     var drinkInstructions= response.drinks[0].strInstructions
     var drinkIngredients= [response.drinks[0].strIngredient1, response.drinks[0].strIngredient2, response.drinks[0].strIngredient3, response.drinks[0].strIngredient4, response.drinks[0].strIngredient5, response.drinks[0].strIngredient6, response.drinks[0].strIngredient7]
-        $("#drink-modal-header").text(drinkName)
-        $("#drink-glass").text(drinkGlass)
-        $("#drink-ingredients").text(drinkIngredients)
-        $("#drink-instructions").text(drinkInstructions)
-        console.log(drinkName)
-        console.log(drinkGlass)
-        console.log(drinkInstructions)
-        console.log(drinkIngredients)
+        $("#drink-modal-header").text(`Drink name: ${drinkName}`)
+        $("#drink-glass").text(`Glass needed: ${drinkGlass}`)
+        $("#drink-ingredients").text(`Ingredients needed: ${drinkIngredients}`)
+        $("#drink-instructions").text(`Instructions: ${drinkInstructions}`)
+        $("#drink-image").attr("src", response.drinks[0].strDrinkThumb).attr("style", "height: 150px;")
     })
+
+
 })
 
 // if (backburnerItems.length===0){
 //     $("#drink-modal").attr("style", "display: block")
 // }
 
-// $("#nonalcoholic-button").on("click", function(){
-//     event.preventDefault()
-// $.ajax({
-//     url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
-//     method: "GET"
-// }).then(function(response){
-//     console.log(response)
-//     var drinkName= response.drinks[0].strDrink
-//     var drinkGlass= response.drinks[0].strGlass
-//     var drinkInstructions= response.drinks[0].strInstructions
-//     var drinkIngredients= [response.drinks[0].strIngredient1, response.drinks[0].strIngredient2, response.drinks[0].strIngredient3, response.drinks[0].strIngredient4, response.drinks[0].strIngredient5, response.drinks[0].strIngredient6, response.drinks[0].strIngredient7]
-//     var ul=$("<ul>")
-//     var li=("<li>")
-//         $(".drink-modal-body").append(ul)
-//         $("#drink-modal-header").text(drinkName)
-//         ul.append(li).text(drinkGlass)
-//         ul.append(li).text(drinkInstructions)
-//         ul.append(li).text(drinkIngredients)
-//     })
-// })
+$("#nonalcoholic-button").on("click", function(){
+    event.preventDefault()
+$.ajax({
+    url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
+    method: "GET"
+}).then(function(response){
+    console.log(response)
+    var i = Math.floor(Math.random()*response.drinks.length)
+    var drinkName= response.drinks[i].strDrink
+    $("#drink-modal-header").text(`Drink name: ${drinkName}`)
+    $("#drink-glass").text("")
+    $("#drink-ingredients").text("")
+    $("#drink-instructions").text("")
+    $("#drink-image").attr("src", response.drinks[i].strDrinkThumb).attr("style", "height: 150px")
+    })
+})
 
-
+$(".checkbox").on("click", function(){
+    $.ajax({
+        url: "https://api.tenor.com/v1/search?key=XCBAJP1CF1AR&q=good+job",
+        method: "GET"
+    }).then(function(response){
+        console.log(response.data[0].url)
+        $("#gif").attr("src", response.data[0].url)
+    })
+})

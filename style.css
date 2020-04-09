@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%;} 
@@ -17,7 +15,6 @@
     .col-12 {width: 100%;}
 }
   
->>>>>>> master
 h1 {
     text-align: center;
 }
@@ -173,6 +170,7 @@ left:0;
         margin-top: 12%;
         
     }
+}
 body {
     background-image: url("assets/ntPd.jpg"); 
   background-size: cover;
@@ -182,4 +180,8 @@ body {
 #drink-modal{
     display: none;
     background-color: red;
+}
+#input-area{
+    width: 20%;
+    height: 80px;
 }
