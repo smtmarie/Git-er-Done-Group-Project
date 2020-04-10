@@ -1,211 +1,192 @@
-
 .container {
-
-    width: 65%;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
+  width: 65%;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 
 #masthead {
-    position: fixed;
-    z-index: 0;
-    width: 100%;
-    margin: 0;
-    overflow: auto;
-    color: #ffffff;
-   
-  }
-  
-  #logo {
-    float: left;
-    width: 100%; 
-    background: transparent;
-    margin: 0;
-    margin-left: 10px;
-  }
-
- 
-  nav {
-    float: right;
-    margin-top: 10px;
-  }
-
-nav a {
-    display: inline-block;
-    padding-left: 15px;
-    margin-left: 15px;
-    line-height: 18px;
-    color: #999;
-    text-decoration: none;
-  }
-  
-  nav a:first-child {
-    border-left: 0 none;
-  }
-
-.boxes {
- height: 50%;
- width: 100%
-}
-
-.priorities {
-   
-    height: 10%;
-    text-align: center;
-    width:67%;
-    margin: 0 auto;
-    flex: 1;
-
-}
-
-.backBurner {
-    height: 20%;
-   
-    text-align: center;
-    width:67%;
-    margin: 0 auto;
-    margin-top: 5px;
-    flex: 1;
-    position: center;
-}
-
-.howTo {
-    margin-left: 84%;
-}
-
-.textArea {
-    background-color: #e2e0e093;
-    margin: 0 auto;
-    width: 98%;
-    margin-top: 1%;
-    border: none;
-}
-
-.howto-modal-content {
-    background-color: lightgray;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    width: 40%;
-    padding: 10px;
-}
-
-
-.bBtn {
-    width: 60%;
-    font-size: 50%;
-    z-index: 1;
-   
-}
-
-@media (min-width: 320px){
-    .input {
-    height: 5px;
-    }
-    .checkbox{
-        font-size: 10px;
-    }
-    #drink-modal {
-        margin: 0 auto;
-        height: 30%;
-    }
-}
-
-@media (min-width: 375px)  {
-    /* For mobile: */
- body{
-  
- }
-    .priorities {
-       margin-top: 8%;}
-     
- 
-       
-}
-
-@media (max-width: 1020px){
-    .priorities {
-        margin-top: 12%;
-        
-    }
-
-    @media (min-width: 1021px){
-        .priorities{
-            margin-top: 5%;
-        }
-    }
-}
-body {
-    background-image: url("assets/ntPd.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    min-height: 1vh;
-    background-position: center;
-}
-.drink-modal-content{
-    display: none;
-    background-color: rgba(192, 192, 192, 0.705);
-    border-radius: 10%;
-    width:100%;
-    /* flex: 1; */
-  
-}
-
-#gif-modal{
-    display: none;
-}
-#input-area{
- 
-    height: 4em;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+  color: #ffffff;
 }
 
 #logo {
-    float: left;
-    width: 15%;
-    height: 13.05%;
-    background: transparent;
-    
+  float: left;
+  width: 100%;
+  background: transparent;
+  margin: 0;
+  margin-left: 10px;
+}
+
+nav {
+  float: right;
+  margin-top: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding-left: 15px;
+  margin-left: 15px;
+  line-height: 18px;
+  color: #999;
+  text-decoration: none;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+.boxes {
+  height: 50%;
+  width: 100%;
+}
+
+.priorities {
+  height: 10%;
+  text-align: center;
+  width: 67%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.backBurner {
+  height: 20%;
+
+  text-align: center;
+  width: 67%;
+  margin: 0 auto;
+  margin-top: 5px;
+  flex: 1;
+  position: center;
+}
+
+.howTo {
+  margin-left: 84%;
+}
+
+.textArea {
+  background-color: #e2e0e093;
+  margin: 0 auto;
+  width: 98%;
+  margin-top: 1%;
+  border: none;
+}
+
+.howto-modal-content {
+  background-color: lightgray;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+  width: 40%;
+  padding: 10px;
+}
+
+.bBtn {
+  width: 60%;
+  font-size: 50%;
+  z-index: 1;
+}
+
+@media (min-width: 320px) {
+  .input {
+    height: 5px;
+  }
+  .checkbox {
+    font-size: 10px;
+  }
+  #drink-modal {
+    margin: 0 auto;
+    height: 30%;
+  }
+}
+
+@media (min-width: 375px) {
+  /* For mobile: */
+  body {
+  }
+  .priorities {
+    margin-top: 8%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .priorities {
+    margin-top: 12%;
+  }
+
+  @media (min-width: 1021px) {
+    .priorities {
+      margin-top: 5%;
+    }
+  }
+}
+body {
+  background-image: url("assets/ntPd.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 1vh;
+  background-position: center;
+}
+.drink-modal-content {
+  display: none;
+  background-color: rgba(192, 192, 192, 0.705);
+  border-radius: 10%;
+  width: 100%;
+  /* flex: 1; */
+}
+
+#gif-modal {
+  display: none;
+}
+#input-area {
+  height: 4em;
+}
+
+#logo {
+  float: left;
+  width: 15%;
+  height: 13.05%;
+  background: transparent;
 }
 
 #how-to-play-button {
-
-    margin-top: -1em;
-    margin-right: 2%;
-    color: black;
-    font-size: medium;
-    width: 100%;
-    height: 10%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   border: 1px solid grey;
-   border-radius: 40%;
+  margin-top: -1em;
+  margin-right: 2%;
+  color: black;
+  font-size: medium;
+  width: 100%;
+  height: 10%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border: 1px solid grey;
+  border-radius: 40%;
 }
 .feet {
-   
   flex: 1;
   margin: 0 auto;
   margin-top: 140%;
 }
 
-.list-item{
-    font-size: 1.5em;
-    text-align: center;
-    font-family: "pacifico";
+.list-item {
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "pacifico";
 }
-.doneButton{
-    float: right;
+.doneButton {
+  float: right;
 }
-#modalbox{
-    width:40%;
-    opacity: 90%;
-
+#modalbox {
+  width: 40%;
+  opacity: 90%;
 }
-
