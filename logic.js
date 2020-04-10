@@ -7,24 +7,6 @@ $("#backburner-button").on("click", function(event){
     addBackburnerItem()
 })
 
-// function addItem(arr){
-//     var todo = $("#input-area").val()
-//     arr.push(todo)
-//     for(i=0; i<arr.length; i++){}
-//     if(arr.length<6){
-//         var li = $("<li>").text(todo).addClass("list-item").attr("id", `${arr}-number${[i]}`)
-//         var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", `${arr}-done-button${[i]}`)
-//         $("#input-area").val("").attr("style", "display: block")
-//         $(`#${arr}`).append(li, doneBtn)
-//     } else{
-//         $("#input-area").attr("style", "display: none")
-//     }
-//     $(`#${arr}-done-button${[i]}`).on("click", function(event){
-//         event.preventDefault()
-//         removeItem(arr)
-//     })
-// }
-
 var backburnerId = 1
 
 function addBackburnerItem(){
