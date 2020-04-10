@@ -37,7 +37,7 @@ function addBackburnerItem(){
         $("#backburner-to-do-list").append(li, doneBtn)
         backburnerId++
     } else {
-        $("#input-area").attr("style", "display: none")
+        $("#input-area").attr("style", "display: none").attr("text", "no")
     }
     if (backburnerItems.length===0){
         $(".drink-modal-content").attr("style", "display: block")
