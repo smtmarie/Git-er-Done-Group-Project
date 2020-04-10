@@ -1,8 +1,4 @@
 
-h1 {
-    text-align: center;
-}
-
 .container {
 
     width: 65%;
@@ -10,11 +6,7 @@ h1 {
     height: 100%;
     width: 100%;
 }
-.container2 {
-    width: 100%;
-    margin: 0 auto;
-    clear: both;
-}
+
 #masthead {
     position: fixed;
     z-index: 0;
@@ -33,26 +25,10 @@ h1 {
     margin-left: 10px;
   }
 
-  #how-to-play-button {
-      margin-right: 10px;
-      margin-top: 10px;
-      color: black;
-      font-size: x-large;
-      width: 100%;
-      height: 10%;
-      font-family: Arial, Helvetica, sans-serif;
-  }
-
-  #how-to-play-button {
-      margin-right: 80px;
-      color: black;
-      font-size: x-large;
-      font-family: Arial, Helvetica, sans-serif;
-  }
-  
+ 
   nav {
     float: right;
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
 nav a {
@@ -97,21 +73,12 @@ nav a {
     margin-left: 84%;
 }
 
-.input {
-    background-color: rgba(0, 0, 0, 0);
-    width: 60%;
-    height: 10%;
-    /* opacity: 0.1; */
-    color: black;
-    font-weight: inherit;
- 
-}
 .textArea {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #e2e0e093;
     margin: 0 auto;
     width: 98%;
     margin-top: 1%;
-    border: lightskyblue;
+    border: none;
 }
 
 .howto-modal-content,
@@ -120,34 +87,10 @@ gif-modal-content {
     display: none;
 }
 
-.fa-exclamation {
-    padding-right: 6px;
-
-}
-.fa-thumbs-up {
-    padding-right: 16px;
-}
-
-.checkbox{
-    margin-left: 25px;
-}
-
-.src {
-width:100%;
-position: absolute;
-top:0;
-left:0;
-}
-
-.pBtn {
-    width: 20%;
-    font-size: 80%;
-    margin-bottom: 5px;
-}
 
 .bBtn {
-    width: 25%;
-    font-size: .8em;
+    width: 60%;
+    font-size: 50%;
 }
 
 @media (min-width: 320px){
@@ -175,10 +118,16 @@ left:0;
        
 }
 
-@media (min-width: 1022px){
+@media (max-width: 1020px){
     .priorities {
         margin-top: 12%;
         
+    }
+
+    @media (min-width: 1021px){
+        .priorities{
+            margin-top: 5%;
+        }
     }
 }
 body {
@@ -200,7 +149,6 @@ body {
   
 }
 
-
 #gif-modal{
     display: none;
 }
@@ -218,11 +166,16 @@ body {
 }
 
 #how-to-play-button {
-margin-right: 2.1em;
-margin-top: -1em;
-   height: 1em;
-   width: 1em;
 
+    margin-top: -1em;
+    margin-right: 2%;
+    color: black;
+    font-size: medium;
+    width: 100%;
+    height: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   border: 1px solid grey;
+   border-radius: 40%;
 }
 .feet {
    
@@ -239,3 +192,9 @@ margin-top: -1em;
 .doneButton{
     float: right;
 }
+#modalbox{
+    width:40%;
+    opacity: 90%;
+
+}
+
