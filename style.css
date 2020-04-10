@@ -114,10 +114,18 @@ nav a {
     border: lightskyblue;
 }
 
-.howto-modal-content,
-gif-modal-content {
+.howto-modal-content {
     background-color: lightgray;
     display: none;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    width: 550px;
+    padding: 10px;
 }
 
 .fa-exclamation {
