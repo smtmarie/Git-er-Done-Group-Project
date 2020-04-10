@@ -22,7 +22,7 @@
     width: 100%; 
     background: transparent;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
  
@@ -184,6 +184,14 @@ body {
   margin-top: 140%;
 }
 
+.list-item{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "pacifico";
+}
+.doneButton{
+    float: right;
+}
 #modalbox{
     width:40%;
     opacity: 90%;
