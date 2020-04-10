@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Git 'er Done!</title>
 </head>
 
 <body>
-    <!-- <div class="something"></div> -->
 
     <header id="masthead">
         <div class="container2">
@@ -22,30 +22,23 @@
                 <a href="index.html" id="how-to-play-button">How to play!</a> </nav>
         </div>
     </header> 
-    <div class="container">
+    <div class="container" id="modalbox">
         <div class="boxes">
-           <div class="howto-modal-content"> 
+            <div class="howto-modal-content">
                 <div class="howto-modal-header">
                     <span class="close" id="close-how-to">x</span>
                     <h2><strong><u>How To Play</u></strong></h2>
                 </div>
                 <div class="modal-body">
                     <p>Life gets in the way of productivity, right?! The Get 'Er Done challenge rewards you for getting done what you really should get done, having some fun in the process. Check your to-dos off and get rewarded with some fun. Not checking off your to-dos equals no fun, as well as decreasing allowed fun time. Did we tell you everything is timed?</p>
+                    <p><strong><u>Instructions</u></strong></p>
+                    <p>The Get 'Er Done daily game points you to a reward for getting your top 5 priorities done, having some fun in the process. Have a good laugh each time you complete a to-do, and receive a nice reward when you finish all your tasks. Essentially, Get ‘er Done!</p>
+                    <p>Life gets in the way of productivity, right?! The Get 'Er Done challenge rewards you for getting
+                        done what you really should get done, having some fun in the process. Check your to-dos off and
+                        get rewarded with some fun. Not checking off your to-dos equals no fun, as well as decreasing
+                        allowed fun time. Did we tell you everything is timed?</p>
                     <br>
-                    <p>Essentially, Get 'er Done! Make it through all your tasks for a nice reward.  Good luck.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="gif-modal">
-        <div class="boxes">
-           <div class="gif-modal-content"> 
-                <div>
-                    <span class="close" id="close-gif">x</span>
-                </div>
-                <div class="modal-body">
-                    <img id="gif">
+                    <p>Essentially, Get 'er Done! Make it through all your tasks for a nice reward. Good luck.</p>
                 </div>
             </div>
         </div>
@@ -53,63 +46,59 @@
 
     <div class="priorities">
 
-        <!-- <button id="pBtn">Priority</button></div> -->
-        <!-- <button class="button is-success is-primary pBtn"><span class="icon">
-            <i class="fas fa-exclamation"></i> -->
-            <!-- </span>Priority</button><br>
+        <div class="backBurner">
+            <button class="button is-warning is-light bBtn" id="backburner-button" <span class="icon thumbs"> </span>
+                Click Here to Add Each To-Do</button>
             <textarea class="textArea" id="input-area"></textarea>
-        <ul id="to-do-list1"></ul><br>
-    </div> --> 
-    
-    
-    <div class="backBurner">
-        <button class="button is-warning is-light bBtn" id= "backburner-button"
-             <span class="icon thumbs"> 
-          
-            </span> 
-            Click Here to Add Each To-Do</button>
-            <textarea class="textArea" id="input-area"></textarea>
-        <ul id="backburner-to-do-list"></ul><br>
-     
-    
-    <button class="button is-primary is-outlined" id="test-button">test modal</button>
+            <ul id="backburner-to-do-list"></ul><br>
 
-    <div class="container" id="drink-modal">
-        <div class="boxes" id="modalBox">
-            <div class="drink-modal-content" > 
-                <div class="modal-header">
-                    <span class="close">x</span>
-                </div>
-                <h2>Congratulations on getting your list done! How bout a drinky poo to celebrate?</h2>
-                <button class="button is-primary is-outlined" id="alcoholic-button">Alcoholic</button>
-                <button class="button is-primary is-outlined" id="nonalcoholic-button">Non Alcoholic</button>
-                <div class="drink-modal-body">
-                    
-                    <h2 id="drink-modal-header"></h2>
-                    <img id="drink-image">
-                    <ul id="drink-ul">
-                        <li id="drink-glass"></li>
-                        <li id="drink-ingredients"></li>
-                        <li id="drink-instructions"></li>
-                    </ul>
-                   
-                    
-                   
+            <div class="container" id="gif-modal">
+                <div class="boxes">
+                    <div class="gif-modal-content">
+                        <div>
+                            <span class="close" id="close-gif"></span>
+                        </div>
+                        <div class="modal-body">
+                            <img id="gif">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <footer class="feet"> Be Productive!</footer>        </div>
-    </div>
+
+            <div class="container" id="drink-modal">
+                <div class="boxes" id="modalBox">
+                    <div class="drink-modal-content">
+                        <div class="modal-header">
+                            <span class="close"></span>
+                        </div>
+                        <h2>Congratulations on getting your list done! How bout a drinky poo to celebrate?</h2>
+                        <button class="button is-primary is-outlined" id="alcoholic-button">Alcoholic</button>
+                        <button class="button is-primary is-outlined" id="nonalcoholic-button">Non Alcoholic</button>
+                        <div class="drink-modal-body">
+
+                            <h2 id="drink-modal-header"></h2>
+                            <img id="drink-image">
+                            <ul id="drink-ul">
+                                <li id="drink-glass"></li>
+                                <li id="drink-ingredients"></li>
+                                <li id="drink-instructions"></li>
+                            </ul>
 
 
 
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <footer class="feet"> Be Productive!</footer>
+                </div>
+            </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="logic.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="logic.js"></script>
 </body>
 
 </html>

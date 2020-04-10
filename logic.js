@@ -32,12 +32,13 @@ function addBackburnerItem(){
     backburnerItems.push(todo)
     if (backburnerItems.length < 6){
         var li = $("<li>").text(todo).addClass("list-item").attr("id", `backburner-item${backburnerId}`)
-        var doneBtn = $("<button>").text("done").addClass("doneButton").attr("id", backburnerId)
+        var doneBtn = $("<button>").text("done").addClass("button is-info is-rounded doneButton").attr("id", backburnerId)
         $("#input-area").val("").attr("style", "display: block")
-        $("#backburner-to-do-list").append(li, doneBtn)
+        li.append(doneBtn)
+        $("#backburner-to-do-list").append(li)
         backburnerId++
     } else {
-        $("#input-area").attr("style", "display: none")
+        $("#input-area").val("")
     }
     if (backburnerItems.length===0){
         $(".drink-modal-content").attr("style", "display: block")
